@@ -1,0 +1,14 @@
+.column-container {
+display: flexbox;
+    flex-direction: column;
+}
+
+.column {
+    flex: 33%;
+    align-content: center;
+}
+
+.header-container {
+    margin: auto;
+    width: 50%
+}

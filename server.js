@@ -27,7 +27,7 @@ app.get("/api/getCheckout",(req,res) =>{
     myHeaders.append("Authorization", "Bearer ");
     
     var urlencoded = new URLSearchParams();
-    urlencoded.append("customer_creation","always");
+    urlencoded.append("customer_creation","always",);
     urlencoded.append("line_items[0][price_data][unit_amount]",);
     urlencoded.append("line_items[0][price_data][currency]",);
     urlencoded.append("line_items[0][price_data][product_data][description]",);
@@ -54,12 +54,11 @@ app.get("/api/getCheckout",(req,res) =>{
     
     fetch("https://api.stripe.com/v1/checkout/sessions", requestOptions)
       .then(response => response.json())
-      .then(result => )
       .catch(error => console.log('error', error));
     
     
     }
-})
+)
 
 app.listen(port, () => {
   console.log(`Server is listening to ${port}`);
